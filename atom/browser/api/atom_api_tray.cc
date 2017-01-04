@@ -108,6 +108,10 @@ void Tray::OnBalloonClosed() {
   Emit("balloon-closed");
 }
 
+void Tray::OnMouseMove(){
+  Emit("mouse-move");
+}
+
 void Tray::OnDrop() {
   Emit("drop");
 }

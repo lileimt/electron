@@ -164,6 +164,9 @@ LRESULT CALLBACK NotifyIconHost::WndProc(HWND hwnd,
       case TB_HIDEBUTTON:
         win_icon->NotifyBalloonClosed();
         return TRUE;
+      case WM_MOUSEMOVE:
+        win_icon->NotifyMouseMove();
+        return TRUE;
 
       case WM_LBUTTONDOWN:
       case WM_RBUTTONDOWN:

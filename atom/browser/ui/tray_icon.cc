@@ -55,6 +55,10 @@ void TrayIcon::NotifyBalloonClosed() {
   FOR_EACH_OBSERVER(TrayIconObserver, observers_, OnBalloonClosed());
 }
 
+void TrayIcon:: NotifyMouseMove(){
+  FOR_EACH_OBSERVER(TrayIconObserver, observers_, OnMouseMove());
+}
+
 void TrayIcon::NotifyRightClicked(const gfx::Rect& bounds, int modifiers) {
   FOR_EACH_OBSERVER(TrayIconObserver, observers_,
                     OnRightClicked(bounds, modifiers));
